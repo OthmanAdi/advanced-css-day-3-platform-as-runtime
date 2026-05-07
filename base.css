@@ -60,6 +60,55 @@ body {
   color: var(--color-brand);
 }
 
+/* === Theme Toggle === */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-switch-slider {
+  position: absolute;
+  inset: 0;
+  background: var(--color-border);
+  border-radius: var(--radius-pill);
+  transition: background 0.25s ease;
+}
+
+.theme-switch-slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: var(--color-bg);
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+
+.theme-switch input:checked + .theme-switch-slider {
+  background: var(--color-brand);
+}
+
+.theme-switch input:checked + .theme-switch-slider::before {
+  transform: translateX(20px);
+}
+
+.theme-switch input:focus-visible + .theme-switch-slider {
+  outline: 3px solid var(--color-featured-border);
+  outline-offset: 2px;
+}
+
 /* === Main Content === */
 .page {
   flex: 1;
