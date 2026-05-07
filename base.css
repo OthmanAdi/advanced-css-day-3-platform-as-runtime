@@ -107,7 +107,15 @@ body {
   color: var(--color-brand);
 }
 
-.btn:focus-visible {
+:where(
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  .btn,
+  .brand
+):focus-visible {
   outline: 3px solid var(--color-featured-border);
   outline-offset: 2px;
 }
