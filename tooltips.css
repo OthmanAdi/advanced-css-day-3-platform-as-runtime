@@ -1,0 +1,38 @@
+/* ============================================================
+   TOOLTIPS.CSS — Anchor Positioning API
+   Diese Datei ist absichtlich fast leer.
+   Die Lecture füllt sie zwischen den Markern.
+
+   Issue, das hier gelöst wird:
+     · Issue #3 — Tooltips auf Profile-Stats ohne JS-Library
+   ============================================================ */
+
+
+/* === BEGIN ISSUE #3 — Anchor Setup === */
+/*  Jede .stat wird zu einem Anker, an dem ein Tooltip hängt.
+    Wir benutzen anchor-name, position-anchor und das
+    ::after-Pseudo-Element für den Tooltip-Inhalt.            */
+
+
+
+/* === END ISSUE #3 === */
+
+
+/* === BEGIN ISSUE #3 — Tooltip Visual + Position === */
+/*  Tooltip ist standardmäßig versteckt. Auf :hover und :focus
+    erscheint er, positioniert über dem Anker.                */
+
+
+
+/* === END ISSUE #3 === */
+
+
+/* === BEGIN ISSUE #5 — @supports Fallback === */
+/*  Anchor Positioning läuft Mai 2026 nur in Chromium-Browsern.
+    Firefox + Safari sehen einen einfachen, statischen Fallback.
+    Das gehört in @supports, damit moderne Browser den Block
+    sehen, ältere ihn überspringen.                            */
+
+
+
+/* === END ISSUE #5 === */
