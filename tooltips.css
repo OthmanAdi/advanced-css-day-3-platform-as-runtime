@@ -6,6 +6,9 @@
    Issue, das hier gelöst wird:
      · Issue #3 — Tooltips auf Profile-Stats ohne JS-Library
    ============================================================ */
+@supports(anchor-name: --x) {
+    /* Alle Styles in diesem Block laufen nur in Browsern, die die Anchor Positioning API unterstützen. */
+
 
 .start {
     anchor-name: --stat;
@@ -13,7 +16,6 @@
     /*Dies ist fur anchro positioning NICHT gebraucht, 
     sonderen gilt als sicherheits netz falls der browser AP noch nicht 
     unterstutzt*/
-
 }
 
 .start[data-tooltip]::after {
@@ -52,15 +54,13 @@
     opacity: 0;
     translate: -50% 0px;
     transition: opacity 0.15s ease, translate 0.15s ease;
-
 }
 
 .stat:hover::after,
 .stat:focus-visible::after {
     opacity: 1;
     translate: -50% -8px;
-
-}
+}}
 
 
 /* === END ISSUE #3 === */
