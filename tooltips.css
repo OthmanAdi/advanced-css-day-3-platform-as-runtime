@@ -7,6 +7,25 @@
      · Issue #3 — Tooltips auf Profile-Stats ohne JS-Library
    ============================================================ */
 
+.start {
+    anchor-name: --stat;
+    position: relative;
+    /*Dies ist fur anchro positioning NICHT gebraucht, 
+    sonderen gilt als sicherheits netz falls der browser AP noch nicht 
+    unterstutzt*/
+
+}
+
+.start[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    position-anchor: --stat;
+    bottom: anchor(top);
+    left: anchor(center);
+    translate: -50% -8px;
+    white-space: nowrap;
+    pointer-events: none;
+}
 
 /* === BEGIN ISSUE #3 — Anchor Setup === */
 /*  Jede .stat wird zu einem Anker, an dem ein Tooltip hängt.
@@ -22,6 +41,26 @@
 /*  Tooltip ist standardmäßig versteckt. Auf :hover und :focus
     erscheint er, positioniert über dem Anker.                */
 
+.start[data-tooltip]::after {
+    background: var(--color-tooltip-bg);
+    color: var(--color-tooltip-text);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.4rem 0.65rem;
+    border-radius: var(--radius-button);
+    box-shadow: var(--shadow-card);
+    opacity: 0;
+    translate: -50% 0px;
+    transition: opacity 0.15s ease, translate 0.15s ease;
+
+}
+
+.stat:hover::after,
+.stat:focus-visible::after {
+    opacity: 1;
+    translate: -50% -8px;
+
+}
 
 
 /* === END ISSUE #3 === */
