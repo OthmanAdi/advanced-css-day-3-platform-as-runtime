@@ -300,6 +300,37 @@
   box-shadow: 0 0 0 3px var(--color-featured-tint);
 }
 
+/* Error-State für Email-Feld: nur wenn nicht leer UND invalid */
+.field:has(input:not(:placeholder-shown):invalid) input {
+  border-color: var(--color-error, #ef4444);
+  animation: color-shift 0.3s ease;
+}
+
+.field:has(input:not(:placeholder-shown):invalid) {
+  position: relative;
+}
+
+.field:has(input:not(:placeholder-shown):invalid)::after {
+  content: "✕";
+  position: absolute;
+  right: 0.75rem;
+  top: 1.6rem;
+  color: var(--color-error, #ef4444);
+  font-size: 0.9rem;
+  pointer-events: none;
+  animation: fade-in 0.3s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes color-shift {
+  from { border-color: var(--color-brand); }
+  to { border-color: var(--color-error, #ef4444); }
+}
+
 .login-form:has(input:placeholder-shown) .btn {
   opacity: 0.55;
   cursor: not-allowed;
