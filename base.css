@@ -55,9 +55,14 @@ body {
   transition: color 0.15s ease;
 }
 
-.site-nav nav a:hover,
+.site-nav nav a:hover {
+  color: var(--color-brand);
+}
+
 .site-nav nav a[aria-current="page"] {
   color: var(--color-brand);
+  border-bottom: 2px solid var(--color-brand);
+  padding-bottom: 0.2rem;
 }
 
 /* === Main Content === */
