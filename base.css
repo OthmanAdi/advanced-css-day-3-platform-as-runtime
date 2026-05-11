@@ -96,17 +96,20 @@ body {
   background: var(--color-button-hover);
 }
 
+/* (0,1,0) */
 .btn-ghost {
   background: transparent;
   color: var(--color-text);
   border-color: var(--color-border);
 }
 
+/* (0,2,0) */
 .btn-ghost:hover {
   border-color: var(--color-brand);
   color: var(--color-brand);
 }
 
+/* (0,2,0) */
 .btn:focus-visible {
   outline: 3px solid var(--color-featured-border);
   outline-offset: 2px;
