@@ -44,3 +44,13 @@
   --shadow-card: 0 1px 2px color-mix(in oklch, var(--black) 4%, transparent),
                  0 4px 12px color-mix(in oklch, var(--black) 6%, transparent);
 }
+
+/* DARK MODE — activated via :has() when #theme-toggle is checked */
+body:has(#theme-toggle:checked) {
+  --color-text:         var(--slate-50);
+  --color-text-muted:   var(--slate-300);
+  --color-bg:           var(--slate-900);
+  --color-card:         var(--slate-700);
+  --color-border:       var(--slate-500);
+  --color-muted:        var(--slate-500);
+}
