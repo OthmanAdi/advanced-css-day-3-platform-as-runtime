@@ -29,7 +29,7 @@
 }
 
 ::view-transition-new(root){
-    animation: 250ms cubic-bezier(0.4, 0, 0.2,) both fade-slide-in; 
+    animation: 250ms cubic-bezier(0.4, 0, 0.2, 1) both fade-slide-in;
 }
 
 @keyframes fade-slide-out{
@@ -58,3 +58,20 @@
 
 
 /* === END ISSUE #4 === */
+
+/* Naming Convestion support to article id´s & adding smooth transition */
+
+#plan-hobby{
+    view-transition-name: --plan-hobby;
+}
+#plan-starter{
+    view-transition-name: --plan-starter;
+}
+#plan-pro{
+    view-transition-name: --plan-pro;
+}
+#plan-enterprise{
+    view-transition-name: --plan-enterprise;
+    }
+
+
