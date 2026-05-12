@@ -55,59 +55,16 @@ body {
   transition: color 0.15s ease;
 }
 
-.site-nav nav a:hover,
-.site-nav nav a[aria-current="page"] {
+.site-nav nav a:hover {
   color: var(--color-brand);
 }
 
-/* === Theme Toggle === */
-.theme-switch {
-  position: relative;
-  display: inline-block;
-  width: 44px;
-  height: 24px;
-  cursor: pointer;
-  flex-shrink: 0;
+.site-nav nav a[aria-current="page"] {
+  color: var(--color-brand);
+  border-bottom: 2px solid var(--color-brand);
+  padding-bottom: 0.2rem;
 }
 
-.theme-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.theme-switch-slider {
-  position: absolute;
-  inset: 0;
-  background: var(--color-border);
-  border-radius: var(--radius-pill);
-  transition: background 0.25s ease;
-}
-
-.theme-switch-slider::before {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  left: 3px;
-  bottom: 3px;
-  background: var(--color-bg);
-  border-radius: 50%;
-  transition: transform 0.25s ease;
-}
-
-.theme-switch input:checked + .theme-switch-slider {
-  background: var(--color-brand);
-}
-
-.theme-switch input:checked + .theme-switch-slider::before {
-  transform: translateX(20px);
-}
-
-.theme-switch input:focus-visible + .theme-switch-slider {
-  outline: 3px solid var(--color-featured-border);
-  outline-offset: 2px;
-}
 
 /* === Main Content === */
 .page {
@@ -140,17 +97,20 @@ body {
   background: var(--color-button-hover);
 }
 
+/* (0,1,0) */
 .btn-ghost {
   background: transparent;
   color: var(--color-text);
   border-color: var(--color-border);
 }
 
+/* (0,2,0) */
 .btn-ghost:hover {
   border-color: var(--color-brand);
   color: var(--color-brand);
 }
 
+/* (0,2,0) */
 .btn:focus-visible {
   outline: 3px solid var(--color-featured-border);
   outline-offset: 2px;
